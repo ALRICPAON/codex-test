@@ -1,0 +1,36 @@
+.home-container {
+  max-width: 600px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.home-buttons button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-buttons button:first-child {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.home-buttons button.secondary {
+  background-color: #f3f4f6;
+  color: #111827;
+}

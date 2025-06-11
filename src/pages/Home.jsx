@@ -1,24 +1,22 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./Home.css"; // Tu peux créer ce fichier pour un peu plus de style
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   return (
-    <div style={{ textAlign: "center", padding: "40px" }}>
-      <h1>{t("welcome")}</h1>
-      <div>
-        <button onClick={() => i18n.changeLanguage("fr")}>FR</button>
-        <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-      </div>
-      <div style={{ marginTop: "20px" }}>
-        <Link to="/signup">
-          <button>{t("signup")}</button>
-        </Link>
-        <Link to="/login" style={{ marginLeft: "10px" }}>
-          <button>{t("login")}</button>
-        </Link>
+    <div className="home-container">
+      <h1>Sellyo</h1>
+      <p>
+        Crée ton tunnel de vente complet <strong>en moins de 3 minutes</strong>,
+        sans aucune compétence technique.
+      </p>
+      <div className="home-buttons">
+        <button onClick={() => navigate("/signup")}>Créer un compte</button>
+        <button onClick={() => navigate("/login")} className="secondary">
+          Se connecter
+        </button>
       </div>
     </div>
   );
