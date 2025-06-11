@@ -20,3 +20,4 @@
     <p>Ton tunnel est prêt à encaisser des ventes dès le lancement.</p>
   </div>
 </div>
+export default Home;
