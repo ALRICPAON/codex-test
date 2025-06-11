@@ -1,34 +1,90 @@
-.home-features {
+.home {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-logo {
+  max-width: 160px;
+  margin-bottom: 30px;
+}
+
+.lang-switch {
+  margin-bottom: 20px;
+}
+.lang-switch button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.lang-switch button.active {
+  background: #ffffff;
+  color: #000;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 25px;
+  margin: 40px 0;
+  padding: 0 10px;
 }
 
 .feature-box {
-  background-color: #f7f7f7;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.feature-box:hover {
+  transform: scale(1.03);
 }
 
-.feature-box:hover {
-  transform: translateY(-5px);
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .feature-box h3 {
   font-size: 1.1rem;
-  margin: 0.5rem 0;
+  margin-bottom: 10px;
 }
 
 .feature-box p {
   font-size: 0.95rem;
-  color: #555;
+  opacity: 0.85;
 }
 
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.home-buttons {
+  margin-top: 30px;
+}
+
+.home-buttons button {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.home-buttons .secondary {
+  background-color: #444;
 }
