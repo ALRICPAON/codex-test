@@ -1,36 +1,41 @@
+// Home.jsx
 import React, { useState } from "react";
-import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import "./Home.css";
 import logo from "../assets/logo.png";
+import landingIcon from "../assets/landing.png";
+import videoIcon from "../assets/video.png";
+import emailIcon from "../assets/email.png";
+import paymentIcon from "../assets/payment.png";
 
 function Home() {
-  const navigate = useNavigate();
   const [lang, setLang] = useState("fr");
+  const navigate = useNavigate();
 
   const content = {
     fr: {
       title: "Crée ton tunnel de vente en quelques clics",
       subtitle: "Gère tout en moins de 3 minutes, sans compétence technique",
       features: [
-        { title: "Landing page automatique", desc: "Page de vente générée par IA." },
-        { title: "Script vidéo inclus", desc: "Un texte vidéo adapté à ton produit." },
-        { title: "Séquence email fournie", desc: "Emails prêts à l’emploi pour relancer tes prospects." },
-        { title: "Bouton de paiement intégré", desc: "Ton tunnel est prêt à encaisser des ventes dès le lancement." }
+        { img: landingIcon, title: "Landing page automatique", desc: "Page de vente générée par IA." },
+        { img: videoIcon, title: "Script vidéo inclus", desc: "Un texte vidéo adapté à ton produit." },
+        { img: emailIcon, title: "Séquence email fournie", desc: "Emails prêts à l'emploi pour relancer tes prospects." },
+        { img: paymentIcon, title: "Bouton de paiement intégré", desc: "Ton tunnel est prêt à encaisser des ventes dès le lancement." },
       ],
-      ctaSignup: "Créer un compte",
-      ctaLogin: "Se connecter"
+      cta1: "Créer un compte",
+      cta2: "Se connecter"
     },
     en: {
-      title: "Create your sales funnel in just a few clicks",
-      subtitle: "Launch in under 3 minutes, no technical skills needed",
+      title: "Create your sales funnel in a few clicks",
+      subtitle: "Manage everything in under 3 minutes, no tech skills needed",
       features: [
-        { title: "Automatic landing page", desc: "AI-generated sales page." },
-        { title: "Video script included", desc: "A video pitch tailored to your product." },
-        { title: "Email sequence ready", desc: "Follow-up emails to boost conversions." },
-        { title: "Integrated payment button", desc: "Start selling from day one." }
+        { img: landingIcon, title: "Auto-generated landing page", desc: "Sales page created by AI." },
+        { img: videoIcon, title: "Video script included", desc: "Tailored video script for your product." },
+        { img: emailIcon, title: "Email sequence provided", desc: "Ready-to-use emails to follow up leads." },
+        { img: paymentIcon, title: "Integrated payment button", desc: "Your funnel is ready to collect payments." },
       ],
-      ctaSignup: "Sign up",
-      ctaLogin: "Log in"
+      cta1: "Create account",
+      cta2: "Login"
     }
   };
 
@@ -38,28 +43,25 @@ function Home() {
 
   return (
     <div className="home">
-      <div className="lang-toggle">
+      <img src={logo} alt="Sellyo" className="home-logo" />
+      <div className="lang-switch">
         <button onClick={() => setLang("fr")} className={lang === "fr" ? "active" : ""}>FR</button>
         <button onClick={() => setLang("en")} className={lang === "en" ? "active" : ""}>EN</button>
       </div>
-
-      <img src={logo} alt="Sellyo logo" className="logo" />
-
       <h1>{t.title}</h1>
-      <p>{t.subtitle}</p>
-
+      <p className="subtitle">{t.subtitle}</p>
       <div className="features">
-        {t.features.map((f, i) => (
+        {t.features.map((feat, i) => (
           <div className="feature-box" key={i}>
-            <h3>{f.title}</h3>
-            <p>{f.desc}</p>
+            <img src={feat.img} alt="" className="feature-icon" />
+            <h3>{feat.title}</h3>
+            <p>{feat.desc}</p>
           </div>
         ))}
       </div>
-
       <div className="home-buttons">
-        <button onClick={() => navigate("/signup")}>{t.ctaSignup}</button>
-        <button className="secondary" onClick={() => navigate("/login")}>{t.ctaLogin}</button>
+        <button onClick={() => navigate("/signup")}>{t.cta1}</button>
+        <button className="secondary" onClick={() => navigate("/login")}>{t.cta2}</button>
       </div>
     </div>
   );
