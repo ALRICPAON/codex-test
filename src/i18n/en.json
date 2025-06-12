@@ -1,6 +1,31 @@
 {
-  "welcome": "Welcome to Sellyo",
-  "start": "Get started",
-  "login": "Log in",
-  "signup": "Sign up"
+  "home": {
+    "title": "Welcome to Sellyo",
+    "subtitle": "Generate your sales funnel in 1 minute",
+    "features": {
+      "landing": "Professional landing page",
+      "video": "Engaging video script",
+      "email": "Automated emails",
+      "payment": "Secure payment"
+    },
+    "cta": "Create my funnel"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Access your personal space",
+    "email": "Email",
+    "password": "Password",
+    "button": "Log in",
+    "noAccount": "No account yet?",
+    "create": "Create one"
+  },
+  "signup": {
+    "title": "Sign up",
+    "subtitle": "Join Sellyo in just a few seconds",
+    "email": "Email",
+    "password": "Password",
+    "button": "Sign up",
+    "alreadyAccount": "Already have an account?",
+    "connect": "Log in"
+  }
 }

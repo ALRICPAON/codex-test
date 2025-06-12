@@ -1,6 +1,31 @@
 {
-  "welcome": "Bienvenue sur Sellyo",
-  "start": "Commencer maintenant",
-  "login": "Se connecter",
-  "signup": "Créer un compte"
+  "home": {
+    "title": "Bienvenue sur Sellyo",
+    "subtitle": "Génère ton tunnel de vente en 1 minute",
+    "features": {
+      "landing": "Landing page professionnelle",
+      "video": "Script vidéo captivant",
+      "email": "Emails automatisés",
+      "payment": "Paiement sécurisé"
+    },
+    "cta": "Créer mon tunnel"
+  },
+  "login": {
+    "title": "Se connecter",
+    "subtitle": "Accède à ton espace personnel",
+    "email": "Email",
+    "password": "Mot de passe",
+    "button": "Se connecter",
+    "noAccount": "Pas encore de compte ?",
+    "create": "Créer un compte"
+  },
+  "signup": {
+    "title": "Créer un compte",
+    "subtitle": "Rejoins Sellyo en quelques secondes",
+    "email": "Email",
+    "password": "Mot de passe",
+    "button": "S’inscrire",
+    "alreadyAccount": "Déjà un compte ?",
+    "connect": "Se connecter"
+  }
 }
