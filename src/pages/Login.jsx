@@ -18,26 +18,18 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white">
-      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
-        <div className="flex justify-center mb-6">
-  <div className="h-16 w-16">
-    <img
-      src={logo}
-      alt="Sellyo Logo"
-      className="h-full w-full object-contain"
-    />
-  </div>
-</div>
-
-        <h2 className="text-2xl font-bold mb-1">Se connecter</h2>
-        <p className="text-sm text-zinc-400 mb-6">Accède à ton espace personnel</p>
-
+    <div className="min-h-screen bg-black flex items-center justify-center px-4 text-white">
+      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl">
+        <div className="flex flex-col items-center mb-6">
+          <img src={logo} alt="Sellyo Logo" className="h-16 w-auto mb-4" />
+          <h2 className="text-2xl font-bold">Se connecter</h2>
+          <p className="text-sm text-zinc-400">Accède à ton espace personnel</p>
+        </div>
         <form onSubmit={handleLogin} className="space-y-4">
           <input
             type="email"
             placeholder="Email"
-            className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 bg-zinc-800 rounded-md border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -45,20 +37,19 @@ export default function Login() {
           <input
             type="password"
             placeholder="Mot de passe"
-            className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 bg-zinc-800 rounded-md border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-semibold transition"
           >
             Se connecter
           </button>
         </form>
-
-        <div className="text-sm text-zinc-400 mt-6">
+        <div className="text-sm text-zinc-400 mt-6 text-center">
           Pas encore de compte ?{" "}
           <a href="/signup" className="text-blue-500 hover:underline">
             Créer un compte
