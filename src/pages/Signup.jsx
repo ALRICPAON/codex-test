@@ -17,10 +17,12 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
-        <h2 className="text-2xl font-bold mb-1">Créer un compte</h2>
-        <p className="text-sm text-zinc-400 mb-6">Rejoins Sellyo en quelques secondes</p>
+    <div className="h-screen w-screen flex items-center justify-center bg-black text-white overflow-hidden">
+      <div className="bg-zinc-900 p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center mb-2">Créer un compte</h2>
+        <p className="text-sm text-zinc-400 text-center mb-6">
+          Rejoins Sellyo en quelques secondes
+        </p>
 
         <form onSubmit={handleSignUp} className="space-y-4">
           <input
@@ -47,7 +49,7 @@ export default function SignUp() {
           </button>
         </form>
 
-        <div className="text-sm text-zinc-400 mt-6">
+        <div className="text-sm text-zinc-400 text-center mt-6">
           Déjà un compte ?{" "}
           <a href="/login" className="text-blue-500 hover:underline">
             Se connecter
