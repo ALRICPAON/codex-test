@@ -20,7 +20,9 @@ export default function SignUp() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-white">
       <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
-        <img src={logo} alt="Sellyo Logo" className="mx-auto h-16 mb-6" />
+        <div className="flex justify-center mb-6">
+          <img src={logo} alt="Sellyo Logo" className="h-16 w-auto max-w-[120px]" />
+        </div>
         <h2 className="text-2xl font-bold mb-1">Créer un compte</h2>
         <p className="text-sm text-zinc-400 mb-6">Rejoins Sellyo en quelques secondes</p>
 
