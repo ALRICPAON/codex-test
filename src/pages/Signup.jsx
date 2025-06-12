@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import logo from "../assets/logo.png"; // ✅ chemin vers le logo
+import logo from "../assets/logo.png";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -18,35 +18,32 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white px-4">
-      <div className="max-w-md w-full space-y-8 p-8 rounded-2xl bg-zinc-900 shadow-2xl">
-        <div className="text-center">
-          <img src={logo} alt="Sellyo Logo" className="mx-auto h-12 mb-4" />
-          <h2 className="text-2xl font-bold">Créer un compte</h2>
-          <p className="text-sm text-zinc-400">Rejoins Sellyo en quelques secondes</p>
-        </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSignUp}>
-          <div className="space-y-4">
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Mot de passe"
-              className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
+        <img src={logo} alt="Sellyo Logo" className="mx-auto h-16 mb-6" />
+        <h2 className="text-2xl font-bold mb-1">Créer un compte</h2>
+        <p className="text-sm text-zinc-400 mb-6">Rejoins Sellyo en quelques secondes</p>
+
+        <form onSubmit={handleSignUp} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            className="w-full px-4 py-3 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <button
             type="submit"
-            className="w-full py-3 mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
           >
             S’inscrire
           </button>
