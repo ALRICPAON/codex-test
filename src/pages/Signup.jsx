@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import logo from "../assets/logo.png";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -18,13 +17,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 text-white">
-      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl">
-        <div className="flex flex-col items-center mb-6">
-          <img src={logo} alt="Sellyo Logo" className="h-16 w-auto mb-4" />
-          <h2 className="text-2xl font-bold">Créer un compte</h2>
-          <p className="text-sm text-zinc-400">Rejoins Sellyo en quelques secondes</p>
-        </div>
+    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
+        <h2 className="text-2xl font-bold mb-1">Créer un compte</h2>
+        <p className="text-sm text-zinc-400 mb-6">Rejoins Sellyo en quelques secondes</p>
+
         <form onSubmit={handleSignUp} className="space-y-4">
           <input
             type="email"
@@ -49,7 +46,8 @@ export default function SignUp() {
             S’inscrire
           </button>
         </form>
-        <div className="text-sm text-zinc-400 mt-6 text-center">
+
+        <div className="text-sm text-zinc-400 mt-6">
           Déjà un compte ?{" "}
           <a href="/login" className="text-blue-500 hover:underline">
             Se connecter

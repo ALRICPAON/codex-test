@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import logo from "../assets/logo.png";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,13 +17,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 text-white">
-      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl">
-        <div className="flex flex-col items-center mb-6">
-          <img src={logo} alt="Sellyo Logo" className="h-16 w-auto mb-4" />
-          <h2 className="text-2xl font-bold">Se connecter</h2>
-          <p className="text-sm text-zinc-400">Accède à ton espace personnel</p>
-        </div>
+    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-zinc-900 p-8 rounded-2xl shadow-2xl text-center">
+        <h2 className="text-2xl font-bold mb-1">Se connecter</h2>
+        <p className="text-sm text-zinc-400 mb-6">Accède à ton espace personnel</p>
+
         <form onSubmit={handleLogin} className="space-y-4">
           <input
             type="email"
@@ -49,7 +46,8 @@ export default function Login() {
             Se connecter
           </button>
         </form>
-        <div className="text-sm text-zinc-400 mt-6 text-center">
+
+        <div className="text-sm text-zinc-400 mt-6">
           Pas encore de compte ?{" "}
           <a href="/signup" className="text-blue-500 hover:underline">
             Créer un compte
